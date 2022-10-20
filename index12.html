@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html><head><style>body{background-image:url("C:/Users/CircleEdges-IN/Downloads/park.jpeg") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;}</style>
+  
+   
+</head>
+<body   text="white">
+<form>
+  <div>
+           <table align="center" >
+            
+               
+            
+     <tbody><tr>
+       <td>
+        <h1 >Diet chart</h1> 
+      </td>
+  </tr>
+  <tr>
+    <td>
+      
+<label><h2 align="center" >Veg/Non-Veg</h2></label>
+    </td>
+  </tr>
+  
+         
+      
+        
+             
+              
+                 
+         <div>
+           
+             
+              
+              <tr>
+               <td>
+                  <br>
+                  
+                    <input type="checkbox" id="v">Veg
+                    <input type="checkbox" id="n">Non-Veg </td></tr>
+                 
+<tr><td>
+<h2><P><label>
+Age</label></p></h2>
+<br>
+<select>
+     
+                               
+                                <p><font size="80"><option>adolescents(12-17)</option></p>
+                                <p><font size="80"><option>Adults(18-29)</option></p>
+                                           <p><font size="80"><option>Middle age(30-50)</option></p>
+                                <p><font size="80"><option>Senior citizens(51-72)</option></p>
+
+
+        
+   
+          
+
+                  
+
+
+
+
+
+               </select></td>
+ </tr></tbody></table>
+
+ <p align="center"> 
+<button type="button" onclick="return diet()" align="center">Submit</button></form>
+<font size="5"> <a href="C:/Users/CircleEdges-IN/Downloads/index13vegwebpage.html" style="display: none " id="c" align="center" >Veg Diet</a><br>
+<a href="C:/Users/CircleEdges-IN/Downloads/index14nonvegwebpage.html" style="display: none " id="d" align="center">Non-Veg Diet</a><br></p></font>
+>
+<style>
+  a:link {
+    color: rgb(247, 247, 247);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: rgb(133, 221, 17);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  </style>
+<script>
+  function diet(){
+   
+    var b = document.getElementById("n")
+    var a= document.getElementById("v")
+      var text=document.getElementById("c")
+    if( a.checked==true
+      ){
+     c.style.display ="block";
+    }
+    else if ( b.checked==true
+      ){
+     d.style.display ="block";
+    }
+    else if ( b.checked==false
+      ){
+     d.style.display ="none";
+    }
+    else if ( a.checked==false
+      ){
+     d.style.display ="none";
+    }
+  }
+</script>
+</body></html>

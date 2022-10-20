@@ -1,0 +1,35 @@
+<html>
+<body style="background-color: #87CEEB;font-style:italic;font-family:georgia;">
+
+<script>
+
+function right(){
+document.getElementById("message").innerHTML = "Congratulations!!! <br> You have cleared all four levels of vision test successfully. Your eye sight is perfect."
+document.getElementById("right").style.display = "none";
+document.getElementById("wrong").style.display = "none";
+}
+
+
+function wrong(){
+	document.getElementById("message").innerHTML = "You were not able to identify the letters correctly. Please consult your doctor."
+document.getElementById("right").style.display = "none";
+document.getElementById("wrong").style.display = "none";
+}
+
+</script>
+
+<center>
+<h1> Vision Test Level 4 </h1>
+<br><br><br><br><br><br><br><br><br>
+<div style="font-size:25px;"><b>
+D &nbsp;&nbsp;&nbsp; F &nbsp;&nbsp;&nbsp; P &nbsp;&nbsp;&nbsp;  N &nbsp;&nbsp;&nbsp;  O &nbsp;&nbsp;&nbsp;  I
+</b></div>
+<br><br><br><br>
+<img id="right" src="rightSquare.png" width="70" height="70" align="middle" onclick="right()" style="cursor:pointer;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img id="wrong" src="wrongSquare.png" width="70" height="70" align="middle" onclick="wrong()" style="cursor:pointer;"><br><br>
+<div id="message" style="font-style:bold;font-size:30px;"></div><br><br>
+</center>
+
+</body>
+</html>
