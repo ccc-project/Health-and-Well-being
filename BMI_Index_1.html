@@ -1,0 +1,54 @@
+<html>
+ <head><style>body{background-image:url("download.jpg") ;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;}</style>
+ <h1   align="center">BMI Calculater</h1><br>
+</head> 
+<body align="center" text="white" topmargin="200px" id="body">
+  <script >
+  function myfun()
+  {
+    a=document.getElementById('number').value;
+    b=document.getElementById('numbers').value;
+    c=document.getElementById('result').innerHTML=(b/(a*a));
+  }
+</script>
+<script>
+        function word()
+
+   { 
+    if ( c < 18.5) {document.getElementById('message').innerHTML="You are underweight <br>You should eat:<br>1. Heavy food items that are more in calories. <br>2.	Frequent consumption of food items which are rich in nutrients, it could be snacks, shakes or juices, or proper meals.<br>3.	Adding extra ingredients that are high in calories to regular diet, for example, including eggs and bananas in morning breakfast, etc., can help in increasing the weight.<br>4.	Consume protein supplements along with adequate amount of vegetables and fruits.<br>5.	Eating calorie dense food and maintaining a balanced diet will help in gaining the weight.<br>6.	However, the diet should not be started drastically and instead, should be implemented gradually so that the body is accustomed with it.<br>7.Eat whole-grain breads, pastas and cereals, fruits and vegetables, dairy products, lean protein sources,and nuts and seeds." 
+    
+      
+    } else if (c ==18.5  ) {document.getElementById('message').innerHTML="You're weight is normal"
+      
+    } else if (c ==24.9) {document.getElementById("message").innerHTML="You're weight is normal" }
+    else if (c <24.9 && c >18.5) {document.getElementById("message").innerHTML="You're weight is normal" }
+      else if (c == 25) {document.getElementById("message").innerHTML="You are overweight <br>You should eat:<br>1. Minimally processed, whole foods-whole grains, vegetables, fruits, nuts, healthful sources of protein (fish, poultry, beans), and plant oils.<br>2. 	Limit sugared beverages, refined grains, potatoes, red and processed meats, and other highly processed foods, such as fast food.<br>3. Beans, Soup, Dark Chocolate, Pureed Vegetables, Yogurt with berries, Nuts, Apples.<br>4.  Increase physical activity .<br>5. Limit television time, screen time, and other “sit time”. " }
+      else if (c ==29.9) {document.getElementById("message").innerHTML="You are overweight <br>You should eat:<br>1. Minimally processed, whole foods-whole grains, vegetables, fruits, nuts, healthful sources of protein (fish, poultry, beans), and plant oils.<br>2. 	Limit sugared beverages, refined grains, potatoes, red and processed meats, and other highly processed foods, such as fast food.<br>3. Beans, Soup, Dark Chocolate, Pureed Vegetables, Yogurt with berries, Nuts, Apples.<br>4.  Increase physical activity .<br>5. Limit television time, screen time, and other “sit time”." }
+      else if (c >25 && c<29.9) {document.getElementById("message").innerHTML="You are overweight <br>You should eat:<br>1. Minimally processed, whole foods-whole grains, vegetables, fruits, nuts, healthful sources of protein (fish, poultry, beans), and plant oils.<br>2. 	Limit sugared beverages, refined grains, potatoes, red and processed meats, and other highly processed foods, such as fast food.<br>3. Beans, Soup, Dark Chocolate, Pureed Vegetables, Yogurt with berries, Nuts, Apples.<br>4.  Increase physical activity .<br>5. Limit television time, screen time, and other “sit time”." }
+      else if (c ==30) {document.getElementById("message").innerHTML="You are obese<br>You should do:<br> 150 minutes a week of moderate-intensity physical activity<br>Eat plenty of fruit and vegetables,some milk and dairy foods and some meat, fish, eggs, beans and other non-dairy sources of proteien<br>Consult your doctor"} 
+      else if (c ==34.9) {document.getElementById("message").innerHTML="You are obese<br>You should do:<br> 150 minutes a week of moderate-intensity physical activity<br>Eat plenty of fruit and vegetables,some milk and dairy foods and some meat, fish, eggs, beans and other non-dairy sources of proteien<br>Consult your doctor"}
+      else if (c>30 && c<34.9) {document.getElementById("message").innerHTML="You are obese<br>You should do:<br> 150 minutes a week of moderate-intensity physical activity<br>Eat plenty of fruit and vegetables,some milk and dairy foods and some meat, fish, eggs, beans and other non-dairy sources of proteien<br>Consult your doctor" }
+      else if (c ==35) {document.getElementById("message").innerHTML="You are extremely obese<br>You should eat:<br>Whole grains (whole wheat, steel cut oats, brown rice, quinoa)<br>Vegetables (a colourful variety-not potatoes<br>Whole fruits (not fruit juices)<br>Nuts, seeds, beans, and other healthful sources of protein (fish and poultry)<br>Plant oils (olive and other vegetable oils)<br>Consult your doctor" }
+      else if (c >35) {document.getElementById("message").innerHTML="You are extremely obese<br>You should eat:<br>Whole grains (whole wheat, steel cut oats, brown rice, quinoa)<br>Vegetables (a colourful variety-not potatoes<br>Whole fruits (not fruit juices)<br>Nuts, seeds, beans, and other healthful sources of protein (fish and poultry)<br>Plant oils (olive and other vegetable oils)<br>Consult your doctor" }
+    }
+    
+    </script>
+  
+    <p align="center" style="font-size: 20px">
+  Height:
+  <input type="number" id="number" >m<br><br>
+  Weight:
+  <input type="number" id="numbers" >kg<br><br>
+  <input type="Submit" onclick="return myfun()"><br><br>
+ You're  BMI is 
+<span id="result"></span><br><br>
+<button name="Comment" type="submit" onclick="return word()">Comment</button><br>
+<span id="message"></span></p><br>
+<a href="index12.html"><button>Diet Chart</button></a>
+
+
+</body>
+</html>
