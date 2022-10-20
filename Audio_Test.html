@@ -1,0 +1,161 @@
+<html>
+    <head><style>body{background-image:url("D:/science day project/flower.jpg") ;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;}
+    </style> 
+      <title>Audio_Test</title></head>
+    <body align="center" >
+        <h1 align="center">Audio test</h1><br><br><br>
+       <font size="5"> <p>
+            Wear Headphone or sit in a quiet environment.<br>Set the sound on the volume bar to the lowest till which you can hear and click Finish
+        </p></font>
+        <button id="ASong" onClick="return playPause()" class="button" >Play
+            
+        <audio controls autoplay hidden loop id="audio" volume="1.0">
+            <source src="C:\Users\CircleEdges-IN\OneDrive\Bird-chirping-sound-effect.mp3" type="audio/mpeg" >
+            </audio>
+            </button><br><br><br>
+            
+             <input type="range" value="10" min="0" max="99" step="10" onchange="vol()" id="r" class="slider">
+             <span id="value" hidden></span><br><br><br>
+
+             <button id="ASong1" onClick="return playPause1()" class="button" >Play
+             <audio controls autoplay hidden loop id="audio1" volume="1.0">
+                <source src="C:\Users\CircleEdges-IN\Downloads\piano.mp3" type="audio/mpeg" >
+                </audio>
+                </button><br><br><br>
+                
+                 <input type="range" value="10" min="0" max="99" step="10" onchange="vol1()" id="s" class="slider">
+                 <span id="value1" hidden></span><br><br><br>
+
+                 <button id="ASong2" onClick="return playPause2()" class="button" >Play
+                 <audio  controls autoplay  hidden loop  id="audio2" volume="1.0">
+                  <source src="C:\Users\CircleEdges-IN\OneDrive\ocean_relax.mp3" type="audio/mpeg">
+                </audio>
+                     </button><br><br><br>
+                     
+                      <input type="range" value="10" min="0" max="99" step="10" onchange="vol2()" id="t" class="slider">
+                      <span id="value2" hidden></span><br><br><br>
+                      
+                      <span id="av" hidden> </span>
+               
+             <button onclick="return score()" class="button" >Finish</button><br>
+             <font size="4">
+             <span id="sc"></span></font>
+             
+             
+             <style>
+                .slider {
+                    width: 50%;
+                }
+                .button{
+                    width: 100px;;
+                }
+
+             </style>
+             <script>
+                var slider= document.getElementById('r')
+                var output= document.getElementById('value')
+
+                output.innerHTML= r.value
+                slider.oninput= function num(){
+                    output.innerHTML= this.value
+                }
+                var slider1= document.getElementById('s')
+                var output1= document.getElementById('value1')
+
+                output1.innerHTML= s.value
+                slider1.oninput= function num1(){
+                    output1.innerHTML= this.value
+                }
+                
+                var slider2= document.getElementById('t')
+                var output2= document.getElementById('value2')
+
+                output2.innerHTML= t.value
+                slider2.oninput= function num2(){
+                    output2.innerHTML= this.value
+                }
+                
+                
+            var aud1 = document.getElementById("ASong1").children[0];
+            var isPlaying = false;
+            aud1.pause();
+          
+            function playPause1() {
+              if (isPlaying) {
+                aud1.pause();
+              } else {
+                aud1.play();
+              }
+              isPlaying = !isPlaying;
+            }
+
+            var aud = document.getElementById("ASong").children[0];
+            var isPlaying1 = false;
+            aud.pause();
+          
+            function playPause() {
+              if (isPlaying1) {
+                aud.pause();
+              } else {
+                aud.play();
+              }
+              isPlaying1 = !isPlaying1;
+            }
+            var aud2 = document.getElementById("ASong2").children[0];
+            var isPlaying2 = false;
+            aud2.pause();
+          
+            function playPause2() {
+              if (isPlaying2) {
+                aud2.pause();
+              } else {
+                aud2.play();
+              }
+              isPlaying2 = !isPlaying2;
+            }
+          
+                function vol()
+                {
+                    var a = document.getElementById("audio");
+                   
+                     var slider= 0+ "." + document.getElementById("r").value
+                    
+                    a.volume =  slider
+
+                }
+                function vol1()
+                {
+                    var b = document.getElementById("audio1");
+                   
+                     var slider1= 0+ "." + document.getElementById("s").value
+                    
+                    b.volume =  slider1
+
+                }
+                function vol2()
+                {
+                    var c = document.getElementById("audio2");
+                   
+                     var slider2= 0+ "." + document.getElementById("t").value
+                    
+                    c.volume =  slider2
+
+                }
+                function score(){
+                  var x=document.getElementById("r").value
+                  var y=document.getElementById("s").value
+                  var z=document.getElementById("t").value
+                  var d= document.getElementById("av").innerHTML= ((x+y+z))
+                  if (d>0 && d<303030){document.getElementById("sc").innerHTML="You're hearing is good<br>To prevent damage to your hearing, you should:<br>Turn down the volume of videos, audios etc.<br>Walk away from the loud noise.<br>Take breaks from the noise.<br>Avoid loud, noisy activities and places."}
+                  else  if (d>303030 && d<60){document.getElementById("sc").innerHTML="You're hearing is normal<br>To prevent damage to your hearing, you should: <br>Turn down the volume of videos, audios etc. <br>Walk away from the loud noise.<br>Take breaks from the noise. <br>Avoid loud, noisy activities and places. "}
+                  else  if (d>606060 && d<909090){document.getElementById("sc").innerHTML="You're hearing is bad<br>To prevent further damage to your hearing, you should: <br>Turn down the volume of videos, audios etc. <br>Walk away from the loud noise.<br>Take breaks from the noise. <br>Avoid loud, noisy activities and places. "}
+                  else  if (d==303030){document.getElementById("sc").innerHTML="You're hearing is good<br>To prevent damage to your hearing, you should: <br>Turn down the volume of videos, audios etc. <br>Walk away from the loud noise. <br>Take breaks from the noise. <br>Avoid loud, noisy activities and places. "}
+                  else  if (d==606060){document.getElementById("sc").innerHTML="You're hearing is normal<br>To prevent damage to your hearing, you should: <br>Turn down the volume of videos, audios etc. <br>Walk away from the loud noise. <br>Take breaks from the noise. <br>Avoid loud, noisy activities and places. "}
+                  else  if (d==909090){document.getElementById("sc").innerHTML="You're hearing is bad<br>To prevent  further damage to your hearing, you should: <br>Turn down the volume of videos, audios etc. <br>Walk away from the loud noise. <br>Take breaks from the noise. <br>Avoid loud, noisy activities and places. "}
+                }
+             </script>
+    </body>
+</html>
