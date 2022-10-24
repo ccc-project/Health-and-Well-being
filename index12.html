@@ -46,32 +46,38 @@
 <h2><P><label>
 Age</label></p></h2>
 <br>
-<select>
-     
+
                                
-                                <p><font size="80"><option>adolescents(12-17)</option></p>
-                                <p><font size="80"><option>Adults(18-29)</option></p>
-                                           <p><font size="80"><option>Middle age(30-50)</option></p>
-                                <p><font size="80"><option>Senior citizens(51-72)</option></p>
+                                <p><input type="checkbox" id="ad">adolescents(12-17)</p>
+                                <p><input type="checkbox" id="a2">Adults(18-29)</p>
+                                           <p><input type="checkbox" id="m">Middle age(30-50)</p>
+                                <p><input type="checkbox" id="s">Senior citizens(51-72)</p>
 
 
         
    
           
-
+ 
                   
 
 
 
 
 
-               </select></td>
+               </td>
  </tr></tbody></table>
 
  <p align="center"> 
 <button type="button" onclick="return diet()" align="center">Submit</button></form>
-<font size="5"> <a href="index13vegwebpage.html" style="display: none " id="c" align="center" >Veg Diet</a><br>
-<a href="index14nonvegwebpage.html" style="display: none " id="d" align="center">Non-Veg Diet</a><br></p></font>
+<font size="5">
+  <a href="index24vegforadolescents.html" style="display: none " id="vad" align="center" >Veg Diet</a><br>
+  <a href="index24vegforadults.html" style="display: none " id="va" align="center" >Veg Diet</a><br>
+  <a href="index25vegformiddle-age.html" style="display: none " id="vma" align="center" >Veg Diet</a><br>
+  <a href="index26vegforseniorcitizens.html" style="display: none " id="vsc" align="center" >Veg Diet</a><br>
+  <a href="index17nonvegforadolescents.html" style="display: none " id="nd" align="center" >Veg Diet</a><br>
+  <a href="index20nonvegforadult.html" style="display: none " id="na" align="center" >Veg Diet</a><br>
+  <a href="index22nonvegformiddle-age.html" style="display: none " id="nma" align="center" >Veg Diet</a><br>
+  <a href="index23nonvegforseniorcitizens.html" style="display: none " id="nsc" align="center" >Veg Diet</a><br>
 >
 <style>
   a:link {
@@ -103,23 +109,46 @@ Age</label></p></h2>
    
     var b = document.getElementById("n")
     var a= document.getElementById("v")
+    var c = document.getElementById("ad")
+    var d= document.getElementById("a2")
+    var e = document.getElementById("m")
+    var f= document.getElementById("s")
       var text=document.getElementById("c")
-    if( a.checked==true
+
+
+    if( a.checked==true && c.checked==true
       ){
-     c.style.display ="block";
+     vad.style.display ="block";
     }
-    else if ( b.checked==true
+    else if ( b.checked==true && c.checked==true
       ){
-     d.style.display ="block";
+     nad.style.display ="block";
     }
-    else if ( b.checked==false
+    else if( a.checked==true && d.checked==true
       ){
-     d.style.display ="none";
+     va.style.display ="block";
     }
-    else if ( a.checked==false
+    else if ( b.checked==true && d.checked==true
       ){
-     d.style.display ="none";
+     na.style.display ="block";
     }
+     else if( a.checked==true && e.checked==true
+      ){
+     vma.style.display ="block";
+    }
+    else if ( b.checked==true && e.checked==true
+      ){
+     nma.style.display ="block";
+    }
+    else if( a.checked==true && f.checked==true
+      ){
+     vsc.style.display ="block";
+    }
+    else if ( b.checked==true && f.checked==true
+      ){
+     nsc.style.display ="block";
+    }
+    
   }
 </script>
 </body></html>
